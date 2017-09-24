@@ -12,7 +12,7 @@ import de.fhpotsdam.unfolding.utils.MapUtils;
 /**
  * 并列显示2幅不同地点的地图
  * 
- * @author tang
+ * @author 王关飞
  *
  */
 public class HelloWorld extends PApplet
@@ -71,15 +71,23 @@ public class HelloWorld extends PApplet
 		MapUtils.createDefaultEventDispatcher(this, map1);
 		
 		// TODO: 在下面添加代码来创建map2 
-		// 并修改下面的 draw() 
-		
+		// 并修改下面的 draw()
+
+		map2=new UnfoldingMap(this,410,50,350,500,osProvider);
+		map2.zoomAndPanTo(8,new Location(40.0f,116.3f));
+		MapUtils.createDefaultEventDispatcher(this, map2);
 	}
 
 	/** Draw the Applet window.  */
 	public void draw() {
 		// TODO: 加入代码显示地图
 		map1.draw();
+		map2.draw();
 	}
 
-	
+	public static void main (String[] args) {
+		//Add main method for running as application
+//		PApplet.main(new String[] {"--present", "demos.MyPApplet"});
+		PApplet.main(new String[] {"--present", "module1.HelloWorld"});
+	}
 }
