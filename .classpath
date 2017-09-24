@@ -10,6 +10,6 @@
 	<classpathentry kind="lib" path="lib/libTUIO.jar"/>
 	<classpathentry kind="lib" path="lib/log4j-1.2.15.jar"/>
 	<classpathentry kind="lib" path="lib/sqlite-jdbc-3.7.2.jar"/>
-	<classpathentry kind="lib" path="lib/unfolding.0.9.6.jar"/>
+	<classpathentry kind="lib" path="lib/unfolding.0.9.7-uscd.jar"/>
 	<classpathentry kind="output" path="bin"/>
 </classpath>
