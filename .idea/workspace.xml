@@ -2,7 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="c32ed567-f78a-4654-9a7e-51fd8d2c6107" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/demos/LifeExpectancy.java" afterPath="$PROJECT_DIR$/src/demos/LifeExpectancy.java" />
     </list>
     <ignored path="$PROJECT_DIR$/bin/" />
@@ -18,8 +17,8 @@
       <file leaf-file-name="LifeExpectancy.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/demos/LifeExpectancy.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="313">
-              <caret line="53" column="0" lean-forward="true" selection-start-line="53" selection-start-column="0" selection-end-line="53" selection-end-column="0" />
+            <state relative-caret-position="283">
+              <caret line="51" column="0" lean-forward="true" selection-start-line="51" selection-start-column="0" selection-end-line="51" selection-end-column="0" />
               <folding>
                 <element signature="imports" expanded="true" />
                 <element signature="e#2510#2525#0" expanded="true" />
@@ -435,12 +434,12 @@
       <workItem from="1505643413004" duration="329000" />
       <workItem from="1505663945781" duration="2838000" />
       <workItem from="1506216652526" duration="2606000" />
-      <workItem from="1506238538860" duration="13542000" />
+      <workItem from="1506238538860" duration="14246000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="22797000" />
+    <option name="totallyTimeSpent" value="23501000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="23" width="1440" height="823" extended-state="0" />
@@ -753,8 +752,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/demos/LifeExpectancy.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="313">
-          <caret line="53" column="0" lean-forward="true" selection-start-line="53" selection-start-column="0" selection-end-line="53" selection-end-column="0" />
+        <state relative-caret-position="283">
+          <caret line="51" column="0" lean-forward="true" selection-start-line="51" selection-start-column="0" selection-end-line="51" selection-end-column="0" />
           <folding>
             <element signature="imports" expanded="true" />
             <element signature="e#2510#2525#0" expanded="true" />
