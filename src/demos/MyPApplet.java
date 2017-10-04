@@ -1,6 +1,7 @@
 package demos;
 
 import processing.core.PApplet;
+import processing.core.PFont;
 import processing.core.PImage;
 
 import javax.print.DocFlavor;
@@ -18,12 +19,16 @@ public class MyPApplet extends PApplet{
 	public int ImageHeight=300;
 
 	public int ScreenWidth,ScreenHeight;
-	
+
+	public PFont font;
+
 	public void setup() {
 
 		ScreenWidth=500;
 		ScreenHeight=300;
 		size(ScreenWidth,ScreenHeight);
+
+		font=createFont("Arial",20,true);
 
 	}
 	
@@ -63,6 +68,9 @@ public class MyPApplet extends PApplet{
 		ellipse(350,80,50,50);
 		noFill();
 		arc(250, 200, 60, 60, TWO_PI, TWO_PI+PI);
+		textFont(font);
+		fill(255,0,0);
+		text("qweqweqewqwe",200,200);
 	}
 	
 	public static void main (String[] args) {
