@@ -17,8 +17,9 @@ git clone https://github.com/simontangbit/CourseCode.git
 ## 说明
 
 - src/demos: 课堂演示代码
-- module1: 课程编码作业1
-- module2: 课程编码作业2
+- module1: 课程编程作业1
+- module2: 课程编程作业2
+- module3: 课程编程作业3，注意阅读module3目录下的README
 
 ## 问题及解决方法
 
