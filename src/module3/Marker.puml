@@ -1,26 +1,21 @@
 @startuml
 
-abstract class AbstractList
-abstract AbstractCollection
-interface List
-interface Collection
+interface Marker
+abstract class AbstractMarker
+class SimplePointMarker
+class CityMarker
+abstract class EarthquakeMarker
+class LandQuakeMarker
+class OceanQuakeMarker
 
-List <|-- AbstractList
-Collection <|-- AbstractCollection
+Marker <|-- AbstractMarker
+AbstractMarker <|-- SimplePointMarker
+SimplePointMarker <|--EarthquakeMarker
+SimplePointMarker <|--CityMarker
 
-Collection <|- List
-AbstractCollection <|- AbstractList
-AbstractList <|-- ArrayList
+EarthquakeMarker <|- LandQuakeMarker
 
-class ArrayList {
-Object[] elementData
-size()
-}
+EarthquakeMarker <|- OceanQuakeMarker
 
-enum TimeUnit {
-DAYS
-HOURS
-MINUTES
-}
 
 @enduml
