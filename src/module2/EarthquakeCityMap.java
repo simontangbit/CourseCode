@@ -152,6 +152,7 @@ public class EarthquakeCityMap extends PApplet {
 		fill(0,0,255);
 		ellipse(30,250,10,10);
 		noFill();
+
 	}
 
 	public static void main(String[] args){

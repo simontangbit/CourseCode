@@ -1,6 +1,7 @@
 package module3;
 
 import de.fhpotsdam.unfolding.data.PointFeature;
+import de.fhpotsdam.unfolding.marker.Marker;
 import de.fhpotsdam.unfolding.marker.SimplePointMarker;
 import processing.core.PGraphics;
 
@@ -63,12 +64,14 @@ public abstract class EarthquakeMarker extends SimplePointMarker
 			
 		// 根据depth来确定标记的颜色
 		colorDetermine(pg);
-		
+
 		// 调用在子类中实现的抽象方法来绘制标记
 		drawEarthquake(pg, x, y);
 		
 		// 可选 TODO: 对昨天发生的地震，在标记上绘制一个X		
-		
+		if (properties.get("age").equals("Past Day")){
+			pg.text("X",x,y);
+		}
 		// 恢复之前的风格
 		pg.popStyle();
 		
@@ -78,6 +81,12 @@ public abstract class EarthquakeMarker extends SimplePointMarker
 	// 建议: Deep = red, intermediate = blue, shallow = yellow
 	private void colorDetermine(PGraphics pg) {
 		//TODO: 实现此方法
+		if (getDepth()>=THRESHOLD_DEEP)
+			pg.fill(255,0,0);
+		else if (getDepth()>=THRESHOLD_INTERMEDIATE)
+			pg.fill(0,0,255);
+		else
+			pg.fill(255,255,0);
 	}
 	
 	
