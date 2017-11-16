@@ -20,6 +20,7 @@ git clone https://github.com/simontangbit/CourseCode.git
 - module1: 课程编程作业1
 - module2: 课程编程作业2
 - module3: 课程编程作业3，注意阅读module3目录下的README
+- module4: 课程编程作业4，注意阅读module4目录下的README
 
 ## 问题及解决方法
 
