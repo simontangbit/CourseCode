@@ -16,7 +16,7 @@ public class LandQuakeMarker extends EarthquakeMarker {
 		
 		// 调用EarthquakeMarker构造方法
 		super(quake);
-		
+		radius=3*getMagnitude();
 		// setting field in earthquake marker
 		isOnLand = true;
 	}
@@ -30,7 +30,8 @@ public class LandQuakeMarker extends EarthquakeMarker {
 		// 提示: 注意EarthquakeMarker类中的radius变量及是如何进行初始化的
 		
 		// TODO: 实现此方法
-		
+		pg.ellipse(x,y,this.radius,this.radius);
+
 	}
 	
 

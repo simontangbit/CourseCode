@@ -27,7 +27,7 @@ public class OceanQuakeMarker extends EarthquakeMarker {
 		// 提示: 注意EarthquakeMarker类中的radius变量及是如何进行初始化的
 		
 		// TODO: 实现此方法
-		
+		pg.rect(x,y,radius,radius);
 	}
 	
 

@@ -15,7 +15,7 @@ import processing.core.PGraphics;
 public class CityMarker extends SimplePointMarker {
 	
 	// 三角形标记的大小, 在draw方法中使用
-	public static final int TRI_SIZE = 5;  
+	public static final int TRI_SIZE = 5;
 	
 	public CityMarker(Location location) {
 		super(location);
@@ -39,8 +39,8 @@ public class CityMarker extends SimplePointMarker {
 		// x和y是所绘制对象的中心，用于计算出坐标并传递给图形绘制方法.  
 		// 例如pg.rect(x, y, 10, 10)将绘制一个10x10的正方形，左上角坐标为x, y
 		// 其它方法可以参考processing库的文档
-		
-		
+		pg.fill(255,0,0);
+		pg.triangle(x+TRI_SIZE,y,x-TRI_SIZE,y,x,y-TRI_SIZE);
 		// 恢复之前的绘制风格
 		pg.popStyle();
 	}
@@ -59,5 +59,6 @@ public class CityMarker extends SimplePointMarker {
 	{
 		return Float.parseFloat(getStringProperty("population"));
 	}
-	
+
+
 }

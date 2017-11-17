@@ -83,7 +83,7 @@ public class EarthquakeCityMap extends PApplet {
 		//     STEP 3: 读入地震的RSS feed
 	    List<PointFeature> earthquakes = ParseFeed.parseEarthquake(this, earthquakesURL);
 	    quakeMarkers = new ArrayList<Marker>();
-	    
+
 	    for(PointFeature feature : earthquakes) {
 		  //检查是否为LandQuake
 		  if(isLand(feature)) {
@@ -110,7 +110,7 @@ public class EarthquakeCityMap extends PApplet {
 		background(0);
 		map.draw();
 		addKey();
-		
+
 	}
 	
 	// 用于在界面中绘制key的辅助方法
@@ -125,16 +125,27 @@ public class EarthquakeCityMap extends PApplet {
 		text("Earthquake Key", 50, 75);
 		
 		fill(color(255, 0, 0));
-		ellipse(50, 125, 15, 15);
-		fill(color(255, 255, 0));
-		ellipse(50, 175, 10, 10);
-		fill(color(0, 0, 255));
-		ellipse(50, 225, 5, 5);
-		
+		triangle(45,110,65,110,55,100);
+		noFill();
+		ellipse(55, 125, 15, 15);
+		rect(50, 140, 10, 10);
+		fill(255,255,0);
+		ellipse(55, 200, 10, 10);
+		noFill();
+		fill(0,0,255);
+		ellipse(55, 220, 10, 10);
+		noFill();
+		fill(255,0,0);
+		ellipse(55, 240, 10, 10);
+		noFill();
 		fill(0, 0, 0);
-		text("5.0+ Magnitude", 75, 125);
-		text("4.0+ Magnitude", 75, 175);
-		text("Below 4.0", 75, 225);
+		text("City Marker", 75, 105);
+		text("Land Quake", 75, 125);
+		text("City Marker", 75, 145);
+		text("Size ~ Magnitude", 50, 175);
+		text("Shallow", 75, 200);
+		text("Intermediate", 75, 220);
+		text("Deep", 75, 240);
 	}
 
 	
@@ -151,10 +162,10 @@ public class EarthquakeCityMap extends PApplet {
 		// 如果isInCountry返回true，isLand也应返回true
 		for (Marker m : countryMarkers) {
 			// TODO: 使用isInCountry方法来完成这个方法
-			
+			if (isInCountry(earthquake,m)==true	)
+				 return true;
 		}
-		
-		
+
 		// 不在任何国家中
 		return false;
 	}
@@ -168,8 +179,22 @@ public class EarthquakeCityMap extends PApplet {
 	private void printQuakes() 
 	{
 		// TODO: 实现这个方法
-		
-		
+		for (Marker cMarker	:countryMarkers)
+		{
+			int count=0;
+			for (Marker m:quakeMarkers)
+			{
+				if (m.getProperty("country")==null){
+					continue;
+				}
+				if (cMarker.getStringProperty("name").equals(m.getStringProperty("country"))){
+					count++;
+				}
+			}
+			println(cMarker.getStringProperty("name")+":"+count);
+		}
+
+
 	}
 	
 	
@@ -208,4 +233,7 @@ public class EarthquakeCityMap extends PApplet {
 		return false;
 	}
 
+	public static void main(String[] args){
+		PApplet.main(new String[] {"--present", "module3.EarthquakeCityMap"});
+	}
 }

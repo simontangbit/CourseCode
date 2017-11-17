@@ -1,0 +1,21 @@
+@startuml
+
+interface Marker
+abstract class AbstractMarker
+class SimplePointMarker
+class CityMarker
+abstract class EarthquakeMarker
+class LandQuakeMarker
+class OceanQuakeMarker
+
+Marker <|-- AbstractMarker
+AbstractMarker <|-- SimplePointMarker
+SimplePointMarker <|--EarthquakeMarker
+SimplePointMarker <|--CityMarker
+
+EarthquakeMarker <|- LandQuakeMarker
+
+EarthquakeMarker <|- OceanQuakeMarker
+
+
+@enduml
